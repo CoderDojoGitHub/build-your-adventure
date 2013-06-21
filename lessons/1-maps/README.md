@@ -51,3 +51,11 @@ For our map, we use arrays to draw each line of the map.
 ## Your assignment
 
 Now that we've gone over this, I want you to build an island in the water.
+
+## Free time
+
+- [Download our game template]()
+
+- Move it into your project folder and give it a name
+
+- Open up `game.js` and design your own map!
