@@ -34,8 +34,8 @@ Sprites are little squares all squished into one image. We tell the framework wh
 
 Arrays are one of the basic building blocks of programming. They're a lot like a list. They can have lots of things in them, like numbers or words.
 
-- `[0, 1, 2, 3, 4]
-- `["Hello", "my", "name", "is", "Kyle"]
+- `[0, 1, 2, 3, 4]`
+- `["Hello", "my", "name", "is", "Kyle"]`
 
 Arrays can even have other arrays inside of them!
 
