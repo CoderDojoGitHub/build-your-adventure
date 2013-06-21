@@ -1,6 +1,4 @@
 game.addEventListener("load", function(){
-  console.log('yo')
-
   // Lay out a map
   map = new Map(16, 16)
   map.image = game.assets['images/map.png']
