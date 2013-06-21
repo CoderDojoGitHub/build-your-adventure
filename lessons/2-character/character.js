@@ -1,0 +1,4 @@
+game.addEventListener("load", function(){
+
+
+})
