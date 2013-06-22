@@ -88,3 +88,69 @@ function movement(){
 
 }
 ```
+
+## Make your character point in the right direction
+
+This is the line that decides which one of the sprites to use for your character:
+
+``` javascript
+character.frame = 0
+```
+
+What we're going to do is change this each time the character moves. So we're going to change the `movement` function again:
+
+``` javascript
+function movement(){
+
+  x = this.x
+  y = this.y
+
+  if (game.input.left) {
+    x -= 1 * speed
+    character.frame = 3
+  }
+  if (game.input.right) {
+    x += 1 * speed
+    character.frame = 6
+  }
+  if (game.input.up) {
+    y -= 1 * speed
+    character.frame = 9
+  }
+  if (game.input.down) {
+    y += 1 * speed
+    character.frame = 0
+  }
+
+  this.x = x
+  this.y = y
+
+}
+```
+
+## Collision detection
+
+The first rule in programming is to steal as much as you can. So let's copy and paste this into `map.js`
+
+``` javascript
+map.collisionData =
+  [
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  ]
+```
+
+- Now tell your character how to hit things
