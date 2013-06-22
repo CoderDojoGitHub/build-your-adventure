@@ -2,7 +2,7 @@ game.addEventListener("load", function(){
 
   // Get a character
   character = new Sprite(32, 32)
-  character.image = game.assets['images/boy.gif']
+  character.image = game.assets['images/girl.gif']
   character.frame = 0
   character.x = 100
   character.y = 100
@@ -10,7 +10,7 @@ game.addEventListener("load", function(){
 
   function movement(){
 
-    var x = this.x
+    x = this.x
 
     if (game.input.left) {
       x -= 1
