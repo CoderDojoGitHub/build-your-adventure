@@ -8,7 +8,7 @@ This first lesson is all about building maps and getting started.
 
 ## Getting set up
 
-- Download [this lesson]() onto your computer
+- Download [this lesson](http://bit.ly/dojo-1) onto your computer
 
 - Create a folder for your project and put the lesson files there
 
@@ -54,7 +54,7 @@ Now that we've gone over this, I want you to build an island in the water.
 
 ## Free time
 
-- [Download our game template]()
+- [Download our game template](http://bit.ly/dojo-game)
 
 - Move it into your project folder and give it a name
 
