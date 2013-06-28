@@ -186,6 +186,14 @@ if (map.hitTest(right, bottom)){
 }
 ```
 
+We had to test four different points because your character isn't just one pixel big.
+
+![](http://cl.ly/image/0S301o0G220i/content)
+
+We ended up checking four different points:
+
+![](http://cl.ly/image/3B3l100n3x2W/content)
+
 ## Your assignment
 
 Make the wall in the map an obstacle.
