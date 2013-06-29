@@ -182,6 +182,7 @@ if (map.hitTest(right, bottom)){
 }
 ```
 
+
 We had to test four different points because your character isn't just one pixel big.
 
 ![](http://cl.ly/image/0S301o0G220i/content)
@@ -189,6 +190,54 @@ We had to test four different points because your character isn't just one pixel
 We ended up checking four different points:
 
 ![](http://cl.ly/image/3B3l100n3x2W/content)
+
+
+
+Now we need to detect the edges and make sure that our character can't go past them.
+
+``` javascript
+// Did our character run into something?
+
+var top = y
+var bottom = y + 32
+var left = x
+var right = x + 32
+
+
+if (map.hitTest(left, top)){
+  if( this.x != x ) {
+    x += speed
+  }
+  if( this.y != y ) {
+    y += speed
+  }
+}
+if (map.hitTest(right, top)){
+  if( this.x != x ) {
+    x -= speed
+  }
+  if( this.y != y ) {
+    y -= speed
+  }
+}
+if (map.hitTest(left, bottom)){
+  if( this.x != x ) {
+    x += speed
+  }
+  if( this.y != y ) {
+    y -= speed
+  }
+}
+if (map.hitTest(right, bottom)){
+  if( this.x != x ) {
+    x -= speed
+  }
+  if( this.y != y ) {
+    y -= speed
+  }
+}
+```
+
 
 ## Your assignment
 
