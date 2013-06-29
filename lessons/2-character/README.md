@@ -158,31 +158,27 @@ This map identifies which parts of your map are solid, and which parts the chara
 ``` javascript
 // Did our character run into something?
 
-var top = this.y
-var bottom = this.y + 32
-var left = this.x
-var right = this.x + 32
+var top = y
+var bottom = y + 32
+var left = x
+var right = x + 32
 
 
 if (map.hitTest(left, top)){
-  this.x += 2
-  this.y += 2
-  return
+  x += 2
+  y += 2
 }
 if (map.hitTest(right, top)){
-  this.x -= 2
-  this.y += 2
-  return
+  x -= 2
+  y += 2
 }
 if (map.hitTest(left, bottom)){
-  this.x += 2
-  this.y -= 2
-  return
+  x += 2
+  y -= 2
 }
 if (map.hitTest(right, bottom)){
-  this.x -= 2
-  this.y -= 2
-  return
+  x -= 2
+  y -= 2
 }
 ```
 
