@@ -241,7 +241,11 @@ if (map.hitTest(right, bottom)){
 
 ## Your assignment
 
-Make the wall in the map an obstacle.
+- Try and fix the bugs allowing your character to escape boundaries when the speed is > 2.
+
+- Try and get your character to bounce back in only one direction when they hit an obstacle.
+
+- Make the wall in the map an obstacle.
 
 ## Free time
 

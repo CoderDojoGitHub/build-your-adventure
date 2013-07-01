@@ -23,41 +23,57 @@ game.addEventListener("load", function(){
       x += 1 * speed
       character.frame = 6
     }
-    if (game.input.up) {
-      y -= 1 * speed
-      character.frame = 9
-    }
     if (game.input.down) {
       y += 1 * speed
       character.frame = 0
     }
+    if (game.input.up) {
+      y -= 1 * speed
+      character.frame = 9
+    }
 
-    var top = this.y
-    var bottom = this.y + 32
-    var left = this.x
-    var right = this.x + 32
+    // Did our character run into something?
+    var top = y
+    var bottom = y + 32
+    var left = x
+    var right = x + 32
 
+    if ( map.hitTest(left, top) ) {
+      if (this.x != x) {
+        x += speed
+      }
+      if (this.y != y){
+        y += speed
+      }
+    }
 
-    if (map.hitTest(left, top)){
-      this.x += 2
-      this.y += 2
-      return
+    if ( map.hitTest(right, top) ) {
+      if (this.x != x) {
+        x -= speed
+      }
+      if (this.y != y){
+        y += speed
+      }
     }
-    if (map.hitTest(right, top)){
-      this.x -= 2
-      this.y += 2
-      return
+
+    if ( map.hitTest(left, bottom) ) {
+      if (this.x != x) {
+        x += speed
+      }
+      if (this.y != y){
+        y -= speed
+      }
     }
-    if (map.hitTest(left, bottom)){
-      this.x += 2
-      this.y -= 2
-      return
+
+    if ( map.hitTest(right, bottom) ) {
+      if (this.x != x) {
+        x -= speed
+      }
+      if (this.y != y){
+        y -= speed
+      }
     }
-    if (map.hitTest(right, bottom)){
-      this.x -= 2
-      this.y -= 2
-      return
-    }
+
 
     this.x = x
     this.y = y
