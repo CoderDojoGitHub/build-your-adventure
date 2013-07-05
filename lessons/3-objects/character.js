@@ -74,7 +74,6 @@ game.addEventListener("load", function(){
       }
     }
 
-
     this.x = x
     this.y = y
 

@@ -2,6 +2,8 @@
 
 ## Goals
 
+- Add a new spirte to the map
+
 ## Getting set up
 
 - Download [this lesson]() onto your computer
@@ -11,6 +13,10 @@
 - Open up `index.html`
 
 ## objects.js
+
+## What's a spirte? What's part of the map?
+
+- Layers things
 
 ## Your assignment
 
