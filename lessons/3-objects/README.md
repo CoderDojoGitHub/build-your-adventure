@@ -9,7 +9,7 @@
 
 ## Getting set up
 
-- Download [this lesson]() onto your computer
+- Download [this lesson](http://bit.ly/dojo-3) onto your computer
 
 - Create a folder for your project and put the lesson files there
 
