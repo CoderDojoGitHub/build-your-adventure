@@ -74,10 +74,28 @@ game.addEventListener("load", function(){
       }
     }
 
+
+    // Set character.blocked = true to stop moving when colliding when objects
+    if (character.blocked) {
+      x = this.x + 2 * (this.x - x)
+      y = this.y + 2 * (this.y - y)
+
+      setTimeout(function() {
+        character.blocked = false
+      }, 50)
+    }
+
+
     this.x = x
     this.y = y
 
   }
   character.addEventListener("enterframe", movement)
+
+  function resetCharacter() {
+    character.x = 100
+    character.y = 100
+  }
+  game.rootScene.addEventListener("reset", resetCharacter)
 
 })
