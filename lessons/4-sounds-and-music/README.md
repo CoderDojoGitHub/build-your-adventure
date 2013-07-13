@@ -1,4 +1,4 @@
-# Lesson 4: Music and sound
+# Lesson 4: Sounds and Music
 
 ## Goals
 
