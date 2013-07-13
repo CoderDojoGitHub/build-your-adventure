@@ -87,8 +87,10 @@ Now we are going to do a little trick to loop music over our game. If we just pl
 
 I have marked a spot in ```map.js``` where you can add the code below.
 
+Don't forget to add it to ```preload```!
+
 ``` javascript
-music = game.assets['music/good_vibes.wav']
+music = game.assets['music/goodvibes.wav']
 music.volume = 0.5
 music.play()
 game.addEventListener('enterframe', function() {

@@ -4,8 +4,7 @@ var game = new Game(240, 240)
 game.scale = 2
 game.fps = 25
 game.preload('images/map.png', 'images/boy.gif', 'images/girl.gif',
-             'sounds/pit.wav', 'sounds/appear.wav', 'sounds/bump.wav',
-             'music/good_vibes.wav')
+             'sounds/pit.wav', 'sounds/appear.wav')
 var map, character
 
 function resetGame(){
